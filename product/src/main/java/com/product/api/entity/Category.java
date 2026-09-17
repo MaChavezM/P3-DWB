@@ -1,5 +1,11 @@
-package com.product;
+package com.product.api.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "category")
 public class Category {
     /**
      * Clase que representa una categoría.
@@ -8,11 +14,12 @@ public class Category {
      * @version 1.0
      */
 
-    String category;
-    String tag;
-    Integer parentCategoryId;
-    Integer status;
-    Integer category_id;
+    private String category;
+    private String tag;
+    private Integer parentCategoryId;
+    private Integer status;
+    @Id
+    private Integer category_id;
 
     /**
      * Constructor vacio.
